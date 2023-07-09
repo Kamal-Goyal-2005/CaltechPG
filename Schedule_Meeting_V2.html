@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Schedule a Meeting</title>
+    <link rel="stylesheet" type="text/css" href="Schedule_Meet.css">
+    </head>
+<body>
+    <h1>Schedule a Zoom Meeting</h1>
+    <form>
+        <table id="T1">
+            <caption class="size"> Please enter below details</caption>
+            <tr>
+                <th><label for="meetingTitle">Meeting Title:</label></th>
+                <th><input type="text" id="meetingTitle" name="meetingTitle" required></th>
+            </tr>
+
+            <tr>
+                <th><label for="clientName">Client Name</label></th>
+                <th><input type="text" id="clientName" name="clientName" required></th>
+            </tr>
+
+            <tr>
+                <th><label for="meetingDate">Meeting Date:</label></th>
+                <th><input type="date" id="meetingDate" name="meetingDate" onchange="checkDate()" data-date-format="DD-MON-YYYY" required></th>
+            </tr>
+
+            <tr>
+                <th><label for="meetingTime">Meeting Time:</label></th>
+                <th><input type="time" id="meetingTime" name="meetingTime" required></th>
+            </tr>
+
+            <tr>
+                <th><label for="meetingDuration">Meeting Duration (in minutes):</label></th>
+                <th><input type="number" id="meetingDuration" name="meetingDuration" required></th>
+            </tr>
+
+            <tr>
+                <th><label for="meetingPassword">Meeting Password:</label></th>
+                <th colspan="2">
+                    <input type="password" id="meetingPassword" name="meetingPassword" placeholder="min 6 chars" required>
+                    <br><input type="checkbox" onclick="showpwd()">Show Password
+                </th>
+            </tr>
+
+            <tr>
+                <th><label for="location">Location</label></th>
+                <th><input type="text" id="location" name="location" value="Zoom" required></th>
+            </tr>
+
+
+        </table>
+        <br>
+        <input type="submit" value="Schedule Meeting">
+        <input type="reset" value="Reset">
+    </form>
+    <script>
+function showpwd() {
+  var x = document.getElementById("meetingPassword");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+ function checkDate() {
+   var selectedDate1 = document.getElementById("meetingDate").value;
+   var selectedDate2 = new Date(selectedDate1);
+   var systemDate = new Date().setHours(0, 0, 0, 0);
+   if (selectedDate2   < systemDate) {
+    alert("Date must be in the future");
+   }
+ }
+    </script>
+</body>
+</html>
