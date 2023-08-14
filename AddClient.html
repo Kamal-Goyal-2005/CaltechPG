@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Client Details</title>
+    <title>Client Details</title>
     <link rel="stylesheet" type="text/css" href="Client.css">
 
 </head>
 <body>
-    <h1>Add Client Details</h1>
+    <h1 class="titleclass">Add Client Details</h1>
     <div>
     <form>
        <table style="background-color:#e5e5e5;">
        <caption> Please enter below details</caption>
 
-        <tr><th><label for="firstName">First Name</label></th>
-        <th><input type="text" id="firstName" name="firstName" required></th></tr>
+        <tr><td><label for="firstName">First Name</label></td>
+        <td><input type="text" id="firstName" name="firstName" required></td></tr>
 
-        <tr><th><label for="lastName">Last Name</label></th>
-        <th><input type="text" id="lastName" name="lastName" required></th></tr>
+        <tr><td><label for="lastName">Last Name</label></td>
+        <td><input type="text" id="lastName" name="lastName" required></td></tr>
 
-        <tr><th><label for="userName">User Name</label></th>
-        <th><input type="text" id="userName" name="userName" required></th></tr>
+        <tr><td><label for="userName">User Name</label></td>
+        <td><input type="text" id="userName" name="userName" required></td></tr>
 
-       <tr><th><label for="emailAddress">Email Address</label></th>
-        <th><input type="text" id="emailAddress" name="emailAddress" required></th></tr>
+       <tr><td><label for="emailAddress">Email Address</label></td>
+        <td><input type="text" id="emailAddress" name="emailAddress" required></td></tr>
 
-        <tr><th><label for="clientPassword">Password</label></th>
-        <th colspan="2"><input type="password" id="clientPassword" name="clientPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        <tr><td><label for="clientPassword">Password</label></td>
+        <td colspan="2"><input type="password" id="clientPassword" name="clientPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
         title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-        <br><input type="checkbox" onclick="showpwd()">Show Password</th>
+        <br><input type="checkbox" onclick="showpwd()">Show Password</td>
         </tr>
+        <tr><td>Upload an Photo</td><td><input type="file" name="photo"></td></tr>
 
-        <tr><th><label for="addressLine1">Address Line 1:</label></th>
-        <th><input type="text" id="addressLine1" name="addressLine1" required></th></tr>
+        <tr><td><label for="addressLine1">Address Line 1:</label></td>
+        <td><textarea></textarea></td></tr>
 
-        <tr><th><label for="addressLine2">Address Line 2:</label></th>
-        <th><input type="text" id="addressLine2" name="addressLine2" ></th></tr>
+        <tr><td><label for="addressLine2">Address Line 2:</label></td>
+        <td><input type="text" id="addressLine2" name="addressLine2" ></td></tr>
 
-        <tr><th><label for="addressLine3">Address Line 3:</label></th>
-        <th><input type="text" id="addressLine3" name="addressLine3" ></th></tr>
+        <tr><td><label for="addressLine3">Address Line 3:</label></td>
+        <td><input type="text" id="addressLine3" name="addressLine3" ></td></tr>
 
-        <tr><th><label for="contactNumber">Contact Number:</label></th>
-        <th><input type="text" id="contactNumber" name="contactNumber" required></th></tr>
+        <tr><td><label for="contactNumber">Contact Number:</label></td>
+        <td><input type="text" id="contactNumber" name="contactNumber" required></td></tr>
 
-        <tr><th><label for="city">City:</label></th>
-        <th><input type="text" id="city" name="city" ></th></tr>
+        <tr><td><label for="city">City:</label></td>
+        <td><input type="text" id="city" name="city" ></td></tr>
 
-        <tr><th><label for="state">State:</label></th>
-        <th><input type="text" id="state" name="state" ></th></tr>
+        <tr><td><label for="state">State:</label></td>
+        <td><input type="text" id="state" name="state" ></td></tr>
 
-        <tr><th><label for="country">Choose a country:</label></th>
-        <th>
+        <tr><td><label for="country">Choose a country:</label></td>
+        <td>
         <select id="country" name="country">
         <option value="India">India</option>
         <option value="US">US</option>
         <option value="Japan">Japan</option>
         </select>
-        </th></tr>
+        </td></tr>
        </table>
        <input type="submit" value="Add Client Details">
         <input type="reset" value="Reset">
